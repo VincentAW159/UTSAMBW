@@ -7,109 +7,304 @@ void main() {
 class MyApp extends StatelessWidget {
   const MyApp({Key? key}) : super(key: key);
 
-  // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      title: 'Flutter Demo',
-      theme: ThemeData(
-        // This is the theme of your application.
-        //
-        // Try running your application with "flutter run". You'll see the
-        // application has a blue toolbar. Then, without quitting the app, try
-        // changing the primarySwatch below to Colors.green and then invoke
-        // "hot reload" (press "r" in the console where you ran "flutter run",
-        // or simply save your changes to "hot reload" in a Flutter IDE).
-        // Notice that the counter didn't reset back to zero; the application
-        // is not restarted.
-        primarySwatch: Colors.blue,
-      ),
-      home: const MyHomePage(title: 'Flutter Demo Home Page'),
-    );
-  }
-}
-
-class MyHomePage extends StatefulWidget {
-  const MyHomePage({Key? key, required this.title}) : super(key: key);
-
-  // This widget is the home page of your application. It is stateful, meaning
-  // that it has a State object (defined below) that contains fields that affect
-  // how it looks.
-
-  // This class is the configuration for the state. It holds the values (in this
-  // case the title) provided by the parent (in this case the App widget) and
-  // used by the build method of the State. Fields in a Widget subclass are
-  // always marked "final".
-
-  final String title;
-
-  @override
-  State<MyHomePage> createState() => _MyHomePageState();
-}
-
-class _MyHomePageState extends State<MyHomePage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    // This method is rerun every time setState is called, for instance as done
-    // by the _incrementCounter method above.
-    //
-    // The Flutter framework has been optimized to make rerunning build methods
-    // fast, so that you can just rebuild anything that needs updating rather
-    // than having to individually change instances of widgets.
-    return Scaffold(
-      appBar: AppBar(
-        // Here we take the value from the MyHomePage object that was created by
-        // the App.build method, and use it to set our appbar title.
-        title: Text(widget.title),
-      ),
-      body: Center(
-        // Center is a layout widget. It takes a single child and positions it
-        // in the middle of the parent.
-        child: Column(
-          // Column is also a layout widget. It takes a list of children and
-          // arranges them vertically. By default, it sizes itself to fit its
-          // children horizontally, and tries to be as tall as its parent.
-          //
-          // Invoke "debug painting" (press "p" in the console, choose the
-          // "Toggle Debug Paint" action from the Flutter Inspector in Android
-          // Studio, or the "Toggle Debug Paint" command in Visual Studio Code)
-          // to see the wireframe for each widget.
-          //
-          // Column has various properties to control how it sizes itself and
-          // how it positions its children. Here we use mainAxisAlignment to
-          // center the children vertically; the main axis here is the vertical
-          // axis because Columns are vertical (the cross axis would be
-          // horizontal).
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: <Widget>[
-            const Text(
-              'You have pushed the button this many times:',
-            ),
-            Text(
-              '$_counter',
-              style: Theme.of(context).textTheme.headline4,
-            ),
-          ],
+      title: "UTS nomor 2",
+      home: Scaffold(
+        appBar: AppBar(
+          title: Text("UTS - C14180159"),
+        ),
+        body: Container(
+          padding: EdgeInsets.all(12),
+          child: Column(
+            mainAxisSize: MainAxisSize.min,
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: [
+              Text(
+                "Popular Courses :",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Column(
+                    children: <Widget>[
+                      Icon(Icons.calendar_month),
+                      Text("Science")
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Icon(Icons.emoji_food_beverage),
+                      Text("Cooking")
+                    ],
+                  ),
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      Icon(Icons.wifi_protected_setup),
+                      Text("Math")
+                    ],
+                  ),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[Icon(Icons.man), Text("Biology")],
+                  ),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Icon(Icons.star_half_outlined),
+                      Text("Design")
+                    ],
+                  ),
+                ],
+              ),
+              Text(
+                "Continue Learning :",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                ),
+              ),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                children: [
+                  Column(
+                    children: <Widget>[
+                      Icon(Icons.calendar_month),
+                      Text(
+                        "Science",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "Chapter 4",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey,
+                            fontSize: 10),
+                      ),
+                      TextButton.icon(
+                        icon: Icon(
+                          Icons.lock_clock,
+                          size: 10,
+                          color: Colors.grey,
+                        ),
+                        label: Text(
+                          "27 Mins",
+                          style: TextStyle(fontSize: 10, color: Colors.grey),
+                        ),
+                        onPressed: () {},
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: <Widget>[
+                      Icon(Icons.star_half_outlined),
+                      Text(
+                        "Design",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "Chapter 5",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey,
+                            fontSize: 10),
+                      ),
+                      TextButton.icon(
+                        icon: Icon(
+                          Icons.lock_clock,
+                          size: 10,
+                          color: Colors.grey,
+                        ),
+                        label: Text(
+                          "30 Mins",
+                          style: TextStyle(fontSize: 10, color: Colors.grey),
+                        ),
+                        onPressed: () {},
+                      )
+                    ],
+                  ),
+                  Column(
+                    mainAxisSize: MainAxisSize.max,
+                    children: <Widget>[
+                      Icon(Icons.man),
+                      Text(
+                        "Biology",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "Chapter 1",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey,
+                            fontSize: 10),
+                      ),
+                      TextButton.icon(
+                        icon: Icon(
+                          Icons.lock_clock,
+                          size: 10,
+                          color: Colors.grey,
+                        ),
+                        label: Text(
+                          "25 Mins",
+                          style: TextStyle(fontSize: 10, color: Colors.grey),
+                        ),
+                        onPressed: () {},
+                      )
+                    ],
+                  ),
+                  Column(
+                    mainAxisSize: MainAxisSize.min,
+                    children: <Widget>[
+                      Icon(Icons.emoji_food_beverage),
+                      Text(
+                        "Cooking",
+                        style: TextStyle(fontWeight: FontWeight.bold),
+                      ),
+                      Text(
+                        "Chapter 3",
+                        style: TextStyle(
+                            fontWeight: FontWeight.bold,
+                            color: Colors.grey,
+                            fontSize: 10),
+                      ),
+                      TextButton.icon(
+                        icon: Icon(
+                          Icons.lock_clock,
+                          size: 10,
+                          color: Colors.grey,
+                        ),
+                        label: Text(
+                          "18 Mins",
+                          style: TextStyle(fontSize: 10, color: Colors.grey),
+                        ),
+                        onPressed: () {},
+                      )
+                    ],
+                  ),
+                ],
+              ),
+              Text(
+                "Last Seen Courses :",
+                style: TextStyle(
+                  fontWeight: FontWeight.bold,
+                  fontSize: 18.0,
+                ),
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Icon(Icons.checklist_sharp),
+                      Column(
+                        children: [
+                          Text("Basics of Designing"),
+                          Text(
+                            "1 hour, 25 mins",
+                            style: TextStyle(fontSize: 10, color: Colors.grey),
+                          )
+                        ],
+                      ),
+                      Icon(Icons.play_arrow)
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Icon(Icons.developer_board),
+                      Column(
+                        children: [
+                          Text("Human Respiratory System"),
+                          Text(
+                            "4 hour, 10 mins",
+                            style: TextStyle(fontSize: 10, color: Colors.grey),
+                          )
+                        ],
+                      ),
+                      Icon(Icons.play_arrow)
+                    ],
+                  ),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    children: <Widget>[
+                      Icon(Icons.compass_calibration),
+                      Column(
+                        children: [
+                          Text("Integration & Differentiation"),
+                          Text(
+                            "2 hour, 37 mins",
+                            style: TextStyle(fontSize: 10, color: Colors.grey),
+                          )
+                        ],
+                      ),
+                      Icon(Icons.play_arrow)
+                    ],
+                  ),
+                ],
+              ),
+              Column(
+                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                crossAxisAlignment: CrossAxisAlignment.end,
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    crossAxisAlignment: CrossAxisAlignment.end,
+                    children: <Widget>[
+                      Column(
+                        children: <Widget>[
+                          Icon(
+                            Icons.home,
+                            color: Colors.blue,
+                          ),
+                          Text(
+                            "Home",
+                            style: TextStyle(color: Colors.blue),
+                          )
+                        ],
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          Icon(
+                            Icons.book,
+                            color: Colors.grey,
+                          ),
+                          Text(
+                            "Explore",
+                            style: TextStyle(color: Colors.grey),
+                          )
+                        ],
+                      ),
+                      Column(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        crossAxisAlignment: CrossAxisAlignment.end,
+                        children: <Widget>[
+                          Icon(
+                            Icons.chat,
+                            color: Colors.grey,
+                          ),
+                          Text(
+                            "Chat",
+                            style: TextStyle(color: Colors.grey),
+                          )
+                        ],
+                      )
+                    ],
+                  ),
+                ],
+              )
+            ],
+          ),
         ),
       ),
-      floatingActionButton: FloatingActionButton(
-        onPressed: _incrementCounter,
-        tooltip: 'Increment',
-        child: const Icon(Icons.add),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
     );
   }
 }
